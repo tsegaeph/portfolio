@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tsega Ephrem</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/T.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--navigation menu-->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Tsega</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="{{ url_for('index') }}">Home</a></div>
+                <div class="link"><a href="{{ url_for('about') }}">About</a></div>
+                <div class="link"><a href="{{ url_for('skills') }}">Skills</a></div>
+                <div class="link"><a href="{{ url_for('projects') }}">Projects</a></div>
+                <div class="link"><a href="{{ url_for('hobbies') }}">Hobbies</a></div>
+                <div class="link"><a href="{{ url_for('contact') }}">Contact</a></div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="mobile-menu">
+            <span class="close-icon" onclick="toggleMenu()">×</span>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('hobbies') }}">Hobbies</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <!--Projects section-->
+
+        <section class="projects" id="projects">
+            <div class="content">
+                <h2 class="title"><span>My projects</span></h2>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <div class="topic">Web Development</div>
+                        <p>I'm building websites and web apps. I use my skills in front-end and back-end coding, along with design tools like Figma and Spline, to create websites that look great and are easy to use.</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa-brands fa-bots"></i>
+                        </div>
+                        <div class="topic">Bot Development</div>
+                        <p>I created some fun Telegram bots for a game!(it was for my best friend) One of them is a guessing the word by combining two images game. I'd love to share them with you, but they have some inside jokes that might put both me and my best friend in jail.⛓</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div class="topic">App Development</div>
+                        <p>I'm excited to be turning my web apps into mobile apps! It's a great way to make them more accessible and convenient for users. I'm particularly interested in exploring new features and design elements that are specific to mobile devices. Stay tuned, I'm cooking something 😶‍🌫️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--footer section-->
+
+    <footer>
+        <div class="text"><span>Created By
+            <a href="#">Tsega Ephrem</a>
+            |&#169;2024 All Rights Reserved.
+        </span>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

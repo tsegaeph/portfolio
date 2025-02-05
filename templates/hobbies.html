@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tsega Ephrem</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/T.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--navigation menu-->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Tsega</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="{{ url_for('index') }}">Home</a></div>
+                <div class="link"><a href="{{ url_for('about') }}">About</a></div>
+                <div class="link"><a href="{{ url_for('skills') }}">Skills</a></div>
+                <div class="link"><a href="{{ url_for('projects') }}">Projects</a></div>
+                <div class="link"><a href="{{ url_for('hobbies') }}">Hobbies</a></div>
+                <div class="link"><a href="{{ url_for('contact') }}">Contact</a></div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="mobile-menu">
+            <span class="close-icon" onclick="toggleMenu()">×</span>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('hobbies') }}">Hobbies</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <!--hobbies section-->
+        <section class="hobbies" id="sketches">
+            <div class="content">
+                <h1 class="title"><span>My hobbies</span></h1>
+                <p> I know you’re probably bored of my educational stuff and projects 😁, so let’s take a break! One of my favorite hobbies is sketching with a pen. It’s a great way to learn how to correct mistakes without an eraser; you just add something to balance it out, and suddenly that ‘mistake’ becomes a beautiful part of the piece(bruh I'm not taking about sketches). When I’m feeling creative (or just plain bored like you are now), I whip out my sketchbook and let my imagination run wild. So, kick back and enjoy some of the sketches I made during those moments! 🖌🎨</p>
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slide images -->
+                        <div class="slide">
+                            <img src="{{ url_for('static', filename='images/sld1.jpg') }}" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="{{ url_for('static', filename='images/sld2.jpg') }}" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="{{ url_for('static', filename='images/sld3.jpg') }}" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="{{ url_for('static', filename='images/sld4.jpg') }}" alt="Image 4">
+                        </div>
+                        <div class="slide">
+                            <img src="{{ url_for('static', filename='images/sld5.jpg') }}" alt="Image 5">
+                        </div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--footer section-->
+
+    <footer>
+        <div class="text"><span>Created By
+            <a href="#">Tsega Ephrem</a>
+            |&#169;2024 All Rights Reserved.
+        </span>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

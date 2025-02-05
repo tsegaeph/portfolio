@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tsega Ephrem</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/T.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--navigation menu-->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Tsega</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="{{ url_for('index') }}">Home</a></div>
+                <div class="link"><a href="{{ url_for('about') }}">About</a></div>
+                <div class="link"><a href="{{ url_for('skills') }}">Skills</a></div>
+                <div class="link"><a href="{{ url_for('projects') }}">Projects</a></div>
+                <div class="link"><a href="{{ url_for('hobbies') }}">Hobbies</a></div>
+                <div class="link"><a href="{{ url_for('contact') }}">Contact</a></div>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <nav class="mobile-menu">
+            <span class="close-icon" onclick="toggleMenu()">×</span>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('hobbies') }}">Hobbies</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="main-container">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/tsegaa.jpg') }}" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade_left">
+                        Hey I'm 
+                        <span>Tsega</span>
+                    </h1>
+                    <div class="typewriter">
+                        I'm a
+                        <span class="typewriter-text" id="typewriter-text"></span>
+                        <label for="">|</label>
+                    </div>
+                    <p>I’m a software engineering student at Addis Ababa University, passionate about crafting innovative software solutions. I made this portfolio to test my skills in frontend and some easy backends. I dabble in designing user interfaces and building backend systems, all while pretending to explore endless possibilities. I’m always eager to learn new technologies and collaborate with others to bring my ideas to life…or at least try.</p>
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="fa-brands fa-github" onclick="alert('github.com/tsegaeph')"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin" onclick="alert('linkedin.com/Tsega Eprhem')"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-telegram" onclick="alert('t.me/idonhaveausername')"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram" onclick="alert('instagram.com/tsega_00')"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--footer section-->
+    <footer>
+        <div class="text"><span>Created By
+            <a href="#">Tsega Ephrem</a>
+            |&#169;2024 All Rights Reserved.
+          </span>
+        </div>
+    </footer>   
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
+</body>
+</html>
